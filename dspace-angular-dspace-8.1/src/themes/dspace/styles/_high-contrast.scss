@@ -1,0 +1,94 @@
+.high-contrast,
+.high-contrast nav,
+.high-contrast div,
+.high-contrast li,
+.high-contrast ol,
+.high-contrast header,
+.high-contrast footer,
+.high-contrast section,
+.high-contrast main,
+.high-contrast aside,
+.high-contrast article {
+    background-color: black !important;
+    color: white !important;
+}
+
+.high-contrast h1,
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast h4,
+.high-contrast h5,
+.high-contrast h6,
+.high-contrast p,
+.high-contrast label,
+.high-contrast strong,
+.high-contrast em,
+.high-contrast cite,
+.high-contrast q,
+.high-contrast i,
+.high-contrast b,
+.high-contrast u,
+.high-contrast span {
+    color: white !important;
+}
+
+.high-contrast a {
+    color: white !important;
+    background-color: black !important;
+}
+
+.high-contrast button,
+.high-contrast input[type=button],
+.high-contrast input[type=reset],
+.high-contrast input[type=submit] {
+    background-color: black !important;
+    color: white !important;
+    border: none !important;
+}
+
+.high-contrast input[type=text],
+.high-contrast input[type=password],
+.high-contrast input[type=url],
+.high-contrast input[type=search],
+.high-contrast input[type=email],
+.high-contrast input[type=tel],
+.high-contrast input[type=date],
+.high-contrast input[type=month],
+.high-contrast input[type=week],
+.high-contrast input[type=datetime],
+.high-contrast input[type=datetime-local],
+.high-contrast textarea,
+.high-contrast input[type=number] {
+    background-color: black !important;
+    border: 1px solid white !important;
+    color: white !important;
+}
+
+.high-contrast img.on-contrast-force-gray {
+    filter: grayscale(100%) contrast(120%);
+}
+
+.high-contrast img.on-contrast-force-white {
+    filter: brightness(0) invert(1);
+}
+
+header {
+    border: none !important;
+}
+
+#home-banner {
+    border: none !important;
+}
+
+#homeBannerText  {
+    background-color: transparent !important;
+}
+
+#divBtnDuvidas {
+    background-color: transparent !important;
+}
+
+.btn-secondary {
+    border: 1px solid #ffffff !important;
+}
+

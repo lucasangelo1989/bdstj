@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="row">            
+            <a class="logo mr-3" href="#">
+                <img id="logo-stj-autocontrast" src="assets/images/logo-stj.png" height="25" alt="Logo do STJ">
+            </a>
+            <div class="nav-acessibilidade form-inline">                
+                <a class="nav-link" (click)="toggleHighContrast()" aria-label="Ativar/Desativar alto contraste"><i class="fa-solid fa-circle-half-stroke"></i></a>                
+                <a class="nav-link" (click)="adjustFontSize('increase')" aria-label="Aumentar fonte">A+</a>
+                <a class="nav-link" (click)="adjustFontSize('decrease')" aria-label="Diminuir fonte">A-</a>             
+            </div>
+    
+    <!-- Se NÃO estiver logado -->
+    <div *ngIf="!(isAuthenticated$ | async)" ngbDropdown class="dropdown ml-auto login">
+        <a class="dropdown-toggle" ngbDropdownToggle>
+            <img id="cracha-autocontrast" src="assets/images/D-cracha.svg" style="margin-top: -3px;" height="27" alt="Login">
+             Login
+        </a>
+        <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+            <span>Você é vinculado ao STJ?</span>
+            <p>Efetue seu login para ter acesso a mais recursos</p>
+            <a class="btn btn-login btn-block btn-sm" href="/login" role="button" aria-label="Entrar no sistema">
+                <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i> Entrar
+            </a>
+        </div>
+    </div>
+
+    <!-- Se ESTIVER logado -->
+    <div *ngIf="isAuthenticated$ | async" ngbDropdown class="dropdown ml-auto login">
+        <a class="dropdown-toggle" ngbDropdownToggle>
+            <img src="assets/images/person-placeholder.svg" style="margin-top: -3px;" height="27" alt="Usuário">
+            {{ getEmail((user$ | async)?.email) }}
+        </a>
+        <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="/profile" role="menuitem" aria-label="Acessar perfil">
+                <i class="fa-solid fa-user" aria-hidden="true"></i> Perfil
+            </a>
+            <a class="dropdown-item" href="/mydspace" role="menuitem" aria-label="Acessar Meu DSpace">
+                <i class="fa-solid fa-house" aria-hidden="true"></i> Meu DSpace
+            </a>
+            <a class="dropdown-item" href="/subscriptions" role="menuitem" aria-label="Acessar assinaturas">
+                <i class="fa-solid fa-bell" aria-hidden="true"></i> Assinaturas
+            </a>
+            <div class="dropdown-divider"></div>
+        
+        <a class="btn btn-logout btn-block btn-sm" [routerLink]="'/logout'" role="button" aria-label="Sair do sistema">
+          <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i> Sair
+        </a>
+        </div>
+    </div>
+
+    </div>
+    <div class="logo-bdjur">        
+        <a routerLink="/home"><img id="logo-bdjur-autocontrast" height="40" src="assets/images/logo-bdjur.svg" alt="Voltar à página inicial"></a>
+    </div>
+    <div class="row justify-content-end navbar-bdjur">
+        <nav class="navbar navbar-expand-lg navbar-light">                    
+            <button
+              class="navbar-toggler ml-auto hidden-sm-up float-xs-right"
+              type="button"
+              (click)="toggleMenu()"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <div id="menu-navbar" class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li ngbDropdown class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" ngbDropdownToggle>Sobre</a>
+                  <div ngbDropdownMenu>
+                    <a class="dropdown-item" href="/server/api/core/bitstreams/4e5fbc4e-efdc-4e39-ae36-89d3945f46ff/content?authentication-token=eyJhbGciOiJIUzI1NiJ9.eyJlaWQiOiJhZTY0YzM1My00NTc4LTQ5MzMtODdmNC00MTI5ODgwNTA2ZTEiLCJzZyI6WyI1YTEyOGZlNi1lOWE4LTQ3NWQtYmVkOC00MjNhNGNkMDA0MWUiXSwiZXhwIjoxNzM3MjAzOTMxLCJhdXRoZW50aWNhdGlvbk1ldGhvZCI6ImxkYXAifQ.PmC3zEs1YYL2IwJGKQ7usVptyd5awnffkRKeUYPzH8Q">Sobre a BDJur</a>
+                    <!--<a class="dropdown-item" routerLink="/doc-tecnica">Documentação Técnica</a>-->
+                    <!--<a class="dropdown-item" routerLink="/contact">Contatos</a>-->
+                    <a class="dropdown-item" routerLink="/info/feedback">Fale Conosco</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/community-list">Coleções</a>
+                </li>
+                <li ngbDropdown class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" ngbDropdownToggle>Listar por</a>
+                    <div ngbDropdownMenu>
+                      <a class="dropdown-item" routerLink="/browse/dateissued">Data do documento</a>
+                      <a class="dropdown-item" routerLink="/browse/author">Autor</a>
+                      <a class="dropdown-item" routerLink="/browse/title">Título</a>
+                      <a class="dropdown-item" routerLink="/browse/subject">Assunto</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/statistics">Estatísticas</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>        
+    </div>
+</div>
+

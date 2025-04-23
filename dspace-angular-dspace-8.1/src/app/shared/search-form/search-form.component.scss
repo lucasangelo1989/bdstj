@@ -1,0 +1,37 @@
+// temporary fix for bootstrap 4 beta btn color issue
+.btn-secondary {
+  background-color: var(--bs-input-bg);
+  color: var(--bs-input-color);
+}
+
+.scope-button {
+  max-width: var(--ds-search-form-scope-max-width);
+}
+
+.custom-border {
+    border: 2px solid #adb5bd !important; /* Cinza mais claro */
+    height: calc(2.25rem + 4px); /* Garante que a altura do select e do input sejam iguais */
+    border-radius: 5px; /* Suaviza as bordas */
+}
+
+
+.custom-select {
+    appearance: none; /* Remove o estilo padrão do sistema */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="gray"><path d="M7 10l5 5 5-5z"></path></svg>'); /* Ícone de seta para baixo */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Posiciona a seta */
+    background-size: 15px; /* Tamanho da seta */
+    padding-right: 30px; /* Espaço para a seta */
+     border: 2px solid #f8f9fa !important; /* Cinza mais claro */
+    height: calc(2.25rem + 4px); /* Garante que a altura do select e do input sejam iguais */
+    border-radius: 5px; /* Suaviza as bordas */
+   background-color: #e6e7e8 !important;
+
+}
+
+.row > div[class^="col-"] {
+  padding-left: 0;
+  padding-right: 0;
+}
