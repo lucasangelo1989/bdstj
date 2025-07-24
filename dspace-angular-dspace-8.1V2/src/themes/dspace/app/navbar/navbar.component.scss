@@ -1,0 +1,54 @@
+:host {
+  ::ng-deep .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px);
+    transition: opacity 2s ease, transform 2s ease;
+  }
+
+  ::ng-deep .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* Estilização do botão "Login" */
+.botao-login {
+  cursor: pointer;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+
+  &:hover {
+    background-color: rgba(22, 131, 131, 0.1);
+  }
+
+  .icone-login {
+    height: 30px !important;
+    margin-right: 4px;
+  }
+
+  .texto-login-btn {
+    font-weight: normal;
+    font-size: 1.05rem;
+  }
+}
+
+/* Estilização do Popup */
+.popup-login {
+  text-align: center;
+}
+
+.titulo-popup-login {
+  margin-bottom: 0.5rem;
+  color: #168383;
+}
+
+.texto-popup-login {
+   font-size: 1.05rem; /* <-- antes era 0.9rem */
+  margin-bottom: 0.3rem;
+}

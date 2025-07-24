@@ -1,0 +1,20 @@
+<ng-container>  
+  <div class="row g-3 align-items-end">
+    <div class="col-md-6">
+      <ds-sidebar-dropdown *ngIf="sortOptionsList"
+                           [id]="'search-sidebar-sort'"
+                           [label]="'search.sidebar.settings.sort-by'"
+                           (changed)="reloadOrder($event)">
+        <option *ngFor="let sortOptionsEntry of sortOptionsList"
+                [value]="sortOptionsEntry.field + ',' + sortOptionsEntry.direction.toString()"
+                [selected]="sortOptionsEntry.field === currentSortOption?.field && sortOptionsEntry.direction === currentSortOption?.direction ? 'selected' : null">
+          {{ 'sorting.' + sortOptionsEntry.field + '.' + sortOptionsEntry.direction | translate }}
+        </option>
+      </ds-sidebar-dropdown>
+    </div>
+
+    <div class="col-md-6">
+      <ds-page-size-selector></ds-page-size-selector>
+    </div>
+  </div>
+</ng-container>

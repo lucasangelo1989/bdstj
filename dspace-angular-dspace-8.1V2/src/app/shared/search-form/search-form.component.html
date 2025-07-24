@@ -1,0 +1,24 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form.value)" action="/search" class="p-2 rounded">
+    <div class="row align-items-center flex-nowrap custom-border"> <div class="col-7">
+            <label for="searchQuery" class="form-label visually-hidden">Buscar</label>
+           <input type="text" id="searchQuery" name="query" class="form-control" placeholder="O que procura?">
+
+        </div>
+
+        <div class="col-3">
+            <label for="searchField" class="form-label visually-hidden">Filtrar por</label>
+            <select class="form-control custom-select" id="searchField" [(ngModel)]="selectedField" name="selectedField">
+                 <option value="default">Todos os campos</option>
+                <option value="dc.title">Título</option>
+                <option value="dc.contributor.author">Autor</option>
+                <option value="dc.subject">Assunto</option>
+            </select>
+        </div>
+
+        <div class="col-2 d-grid">
+            <button type="submit" class="btn btn-{{brandColor}} w-100">
+                <i class="fas fa-search"></i> Buscar
+            </button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,68 @@
+// temporary fix for bootstrap 4 beta btn color issue
+.btn-secondary {
+  background-color: var(--bs-input-bg);
+  color: var(--bs-input-color);
+}
+
+.scope-button {
+  max-width: var(--ds-search-form-scope-max-width);
+}
+
+.custom-border {
+    border: 2px solid #adb5bd !important; /* Cinza mais claro */
+    height: calc(2.25rem + 4px); /* Garante que a altura do select e do input sejam iguais */
+    border-radius: 5px; /* Suaviza as bordas */
+}
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="%23106262"><path d="M7 10l5 5 5-5z"></path></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;
+  padding-right: 30px;
+  border: 2px solid #f8f9fa !important;
+  height: calc(2.25rem + 4px);
+  border-radius: 5px;
+  background-color: #16838333 !important;
+  color: #106262;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+.custom-select:focus {
+  border-color: #106262;
+  box-shadow: 0 0 0 0.2rem rgba(16, 98, 98, 0.25);
+  outline: none;
+}
+
+.custom-select:hover {
+  background-color: #dff4f4 !important;
+  cursor: pointer;
+}
+
+.custom-select option {
+  color: #106262 !important;
+}
+
+
+.btn-custom-search {
+  background-color: #168383;
+  border-color: #168383;
+  color: #ffffff;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.btn-custom-search:hover,
+.btn-custom-search:focus {
+  background-color: #106262; /* tom mais escuro no hover */
+  border-color: #106262;
+  color: #ffffff;
+}
+
+
+.row > div[class^="col-"] {
+  padding-left: 0;
+  padding-right: 0;
+}

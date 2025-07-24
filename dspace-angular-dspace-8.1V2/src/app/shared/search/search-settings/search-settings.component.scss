@@ -1,0 +1,18 @@
+.setting-option {
+    border: 1px solid var(--bs-light);
+}
+:host ::ng-deep select#search-sidebar-sort,
+:host ::ng-deep select#search-sidebar-rpp {
+  background-color: #16838333 !important;
+  color: #106262 !important;
+  border: 2px solid #f8f9fa !important;
+  border-radius: 5px;
+  padding-right: 30px;
+  height: calc(2.25rem + 4px);
+}
+
+:host ::ng-deep select#search-sidebar-sort option,
+:host ::ng-deep select#search-sidebar-rpp option {
+  color: #106262 !important;
+}
+

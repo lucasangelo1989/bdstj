@@ -1,0 +1,11 @@
+ui:
+  ssl: false
+  host: bdjur.stj.jus.br
+  port: 4000
+  nameSpace: /
+rest:
+  ssl: true
+  host: bdjur.stj.jus.br
+  port: 443
+  # NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
+  nameSpace: /server
